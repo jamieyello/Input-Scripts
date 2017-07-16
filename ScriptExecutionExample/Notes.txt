@@ -1,0 +1,107 @@
+Programming rules;
+- General C code.
+- No declarations. All values not recognized are created on the spot. This includes arrays. (no "int i = 0", instead it's just "i = 0")
+
+Notes;
+- All values are doubles.
+- This is designed to run on a separate thread, unoptimized code will not necessarily slow down Citra.
+- Commands are not case-sensitive, but variables are.
+- Strings are not supported at this moment, and as long I don't see anyone interested in them.
+
+Compatibility----
+
+// Functions
+Value = value
+Value += value
+Value *= value
+Value /= value
+for () {}
+if () {}
+else {}
+while () {}
+do {}
+while ()
+print()			// Prints a value to the text_output
+cls				// Clears the text_output
+
+// Math code
++, -, *, /, % basic operators
+&&, ||, |, &, ^, ==, !=, >=, <=, >, < logical operators
+Parenthesis
+
+// Return Values (read access only) (implemented, not tested)
+abs()		// Absolute, converts negative values to positive.
+atan()		// Trigometric function.
+cos()		// Trigometric function.
+deg()		// Trigometric function.
+exp()	
+false		// Returns 0.
+floor()		// Removes decimal.
+log()		// Trigometric function.
+pi()		// Returns Pi.
+result		// Returns the result of the last if statement. (true or false)
+rad()		// Trigometric function.
+sgn()		// Converts number to 1 0 or -1.
+sin()		// Trigometric function.
+sqr()		// Square root.
+tan()		// Trigometric function.
+true		// Returns 1.
+
+// 3DS Values (read/write access)
+pad.a
+pad.b
+pad.x
+pad.y
+pad.l
+pad.r
+pad.zr
+pad.zl
+pad.up
+pad.down
+pad.left
+pad.right
+pad.start
+pad.select
+pad.home
+pad.rightStickX
+pad.rightStickY
+pad.leftStickX
+pad.leftStickY
+pad.touchDown
+pad.touchX
+pad.touchY
+
+// Compiler "cheats"; (only relevent while looking at the source code)
+
+for (i=0;i<8;i++)
+is converted to
+for (i=0;i<8;i++);
+
+on loading script. Likewise,
+
+while (value)
+while (value);
+
+else
+else;
+
+do
+do;
+
+{
+{;
+
+}
+};
+
+&& is converted to ~A~ on runtime
+|| is converted to ~O~ on runtime
+| is converted to ~Q~ on runtime
+& is converted to ~W~ on runtime
+^ is converted to ~X~ on runtime
+== is converted to ~E~ on runtime
+!= is converted to ~D~ on runtime
+>= is converted to ~S~ on runtime
+<= is converted to ~M~ on runtime
+> is converted to ~L~ on runtime
+< is converted to ~P~ on runtime

@@ -1,0 +1,36 @@
+if (pad.a && pad.x)
+{
+	print(55);
+}
+
+variableswork = 9;
+print(variableswork);
+
+soDoesMath = 5 * (67 % floor(pi)) + 1;
+print(soDoesMath);
+
+if (pad.down) 
+{
+	if (pad.up)
+	{
+		print(6);
+	}
+	else
+	{
+		for (i = 0; i < 10; i += 2)
+		{
+			print(i + 100);
+		}
+	}
+}
+
+if (pad.left) {
+	X++;
+	X = X % 50;
+}
+else {
+	X = 0;
+}
+
+pad.touchX = X;
+print(pad.touchX)
